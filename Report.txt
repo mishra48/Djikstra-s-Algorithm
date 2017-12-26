@@ -1,0 +1,46 @@
+/**********************************************************************
+ * Project Report Template
+ * Project 3 (Map Routing), ECE368
+ **********************************************************************/
+
+Name:  Kartikeya Mishra     
+Login:      mishra48
+
+/**********************************************************************
+ *  Explain your overall approach to the problem and a short
+ *  general summary of your solution and code.
+ **********************************************************************/
+
+The first that I did after getting the assignment was to go over it thoroughly. Made sure I was aware of all the requirements and outputs. Then I went back to the lecture slides just to brush up on the topic. After that I decided on what sort of data structure of I would. To create the adjacency list I would need to define a typedef node that contains a data value and the address to the next node and also the weight of the edge. Then I would also need to define another typedef structure called graph, which would basically be an array of adjacent lists.  Then I went on YouTube and watched a video on djikstra’s algorithm, just to get a better grip on the topic. Then I started creating a rough draft of how many functions would I need. The first step was to create the adjacency list from the given edges and vertices. To do so an array of linked lists was used. Size of the array was equal to the number of vertices. An entry array[i] represents the linked list of vertices adjacent to the ith vertex. The weights of the edges were also stored in the nodes. After the graph has been created I would just need to start at the given first node and traverse the list until I find the target node. And if I reach NULL before getting to the target node then it would mean that it is impossible to reach the target node from the given node and I would print out an INF. This I basically the overall process that I try to implement to go about solving the project. 
+
+/**********************************************************************
+ *  Known bugs / limitations of your program / assumptions made.
+ **********************************************************************/
+assummptions made: 
+that the user will be compiling using the flags
+
+gcc -Wall -Werror -lm shortest_path.c -o output
+
+*im also assuming that user wont try to query a vertex that is not present in the given list of vertices from the first file. So if there are only 6 vertices user wont try to find the shortest path from 7 -8. 
+Also i also made the assumption that vertices are numbered sequentially from 0 - n and they are integers. 
+* another assumption is that the co-ordinates are integers. 
+
+
+/**********************************************************************
+ *  List whatever help (if any) that you received.
+ **********************************************************************/
+After creating an array of minimum distances from the source. I was not able to to trace the path back from the destination to the source. So to do that a friend of mine helped me and told me me implement  the print_arr function as written in my code. 
+
+
+/**********************************************************************
+ *  Describe any serious problems you encountered.                    
+ **********************************************************************/
+Probably the biggest problem was just tracing the path back after creating the array as mentioned above. 
+
+
+
+/**********************************************************************
+ *  List any other comments/feedback here (e.g., whether you
+ *  enjoyed doing the exercise, it was too easy/tough, etc.).
+ **********************************************************************/
+I really enjoyed this assignment. It was a bit challenging at first when it helped me when i divided it into smaller problems.
